@@ -1,1 +1,18 @@
-Welcome test
+{% extends 'base.html' %}
+
+{% block title %} 
+Welcome test project
+{% endblock %}
+
+{% block content %}
+
+Current time is :- {{current_time}} 
+<br>
+there are currently {{num_post}} posts.
+<hr>
+{% for post in posts %}
+<h2> {{post.title}} </h2>
+<p> {{post.body}} </p>
+{% endfor %}
+
+{% endblock %}
